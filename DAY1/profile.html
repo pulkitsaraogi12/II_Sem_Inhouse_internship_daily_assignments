@@ -1,409 +1,115 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pulkit Saraogi | Student Profile</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
-
-body{
-    background:linear-gradient(135deg,#cfd90f,#14b2b7);
-    padding:30px 25px;
-}
-
-.container{
-    max-width:900px;
-    margin:auto;
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(222, 6, 6, 0.724);
-}
-
-header{
-    background:#003366;
-    color:white;
-    text-align:center;
-    padding:25px;
-}
-
-.profile{
-    display:flex;
-    align-items:center;
-    gap:25px;
-    padding:25px;
-    flex-wrap:wrap;
-}
-
-.profile img{
-
-width:160px;
-
-height:160px;
-
-border-radius:50%;
-
-object-fit:cover;
-
-border:6px solid rgb(15, 14, 14);
-
-box-shadow:0 10px 20px rgba(0,0,0,.25);
-
-transition:.7s;
-
-}
-
-.profile img:hover{
-
-transform:scale(1.08);
-
-}
-
-.profile-info p{
-    margin:8px 0;
-}
-
-section{
-    padding:25px;
-    border-top:1px solid #ddd;
-}
-
-h2{
-    color:#003366;
-    margin-bottom:15px;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-table th{
-    background:#003366;
-    color:white;
-}
-
-table th,
-table td{
-    border:1px solid #ddd;
-    padding:10px;
-    text-align:center;
-}
-
-.skills span{
-    display:inline-block;
-    background:#003366;
-    color:white;
-    padding:8px 15px;
-    margin:5px;
-    border-radius:20px;
-}
-
-a{
-    color:#0066cc;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-a:hover{
-    color:rgb(174, 26, 188);
-}
-
-input,
-textarea{
-    width:100%;
-    padding:10px;
-    margin-top:5px;
-    margin-bottom:15px;
-    border:1px solid #ccc;
-    border-radius:6px;
-}
-
-input[type=submit]{
-    background:#003366;
-    color:white;
-    border:none;
-    cursor:pointer;
-    font-size:16px;
-}
-
-input[type=submit]:hover{
-    background:#0055aa;
-}
-
-footer{
-    background:#10843c;
-    color:rgb(52, 24, 163);
-    text-align:center;
-    padding:15px;
-}
-
-@media(max-width:700px){
-
-.profile{
-    flex-direction:column;
-    text-align:center;
-}
-
-}
-
-</style>
-
+    <title>Student Profile</title>
 </head>
 
 <body>
-<div class="container">
 
-<header>
+    <h1>Student Profile</h1>
 
-<h1>🎓 Student Portfolio</h1>
+    <hr>
 
-<p>Welcome to My Profile</p>
+    <h2>Profile Section</h2>
 
-</header>
+    <img src="WhatsApp Image 2026-06-28 at 4.20.59 PM.jpeg"
+    alt="My Photo"
+    width="150"
+    height="180">
 
-<div class="profile">
+    <p><b>Name:</b> Pulkit Saraogi</p>
 
+    <p><b>College:</b> SKIT Jaipur</p>
 
-<img src="WhatsApp Image 2026-06-28 at 4.20.59 PM.jpeg" alt="Student Photo"
-     width="150"
-     height="180"
-     border-radius:50%;
-     object-fit:cover;> 
+    <p><b>Branch:</b> Computer Science Engineering</p>
 
-     
-<div class="profile-info">
+    <hr>
 
-<h2>Pulkit Saraogi</h2>
 
-<p><strong>College:</strong> SKIT Jaipur</p>
+    <h2>Education</h2>
 
-<p><strong>Branch:</strong> Computer Science Engineering(CSE CORE)</p>
+    <table border="1">
 
-<p><strong> Second Year B.Tech Student</strong></p>
+        <tr>
+            <th>Degree</th>
+            <th>Institution</th>
+            <th>Year</th>
+            <th>Percentage</th>
+        </tr>
 
-</div>
+        <tr>
+            <td>10th</td>
+            <td>KV AFS SOG</td>
+            <td>2023</td>
+            <td>86%</td>
+        </tr>
 
-</div>
-<section>
+        <tr>
+            <td>12th</td>
+            <td>Sunrise School</td>
+            <td>2025</td>
+            <td>72%</td>
+        </tr>
 
-<h2>👤 Personal Information</h2>
+        <tr>
+            <td>B.Tech</td>
+            <td>SKIT Jaipur</td>
+            <td>2026</td>
+            <td>Currently Studying</td>
+        </tr>
 
-<table>
+    </table>
 
-<tr>
+    <hr>
 
-<td><b>Father's Name</b></td>
+    <h2>Skills</h2>
 
-<td>Mahaveer Saraogi</td>
+    <ul>
+        <li>C Programming</li>
+        <li>C++</li>
+        <li>HTML</li>
+    </ul>
 
-</tr>
+    <hr>
 
-<tr>
 
-<td><b>Mother's Name</b></td>
+        <h2>Favourite Website</h2>
 
-<td>Lalita Saraogi</td>
 
-</tr>
+    <a href="https://youtu.be/iHmvm_P-uP8?si=DAP-ebfvicJsUVha" target="_blank">
+        Visit YouTube
+    </a>
 
-<tr>
+    <hr>
 
-<td><b>Gender</b></td>
+    <h2>Contact Form</h2>
 
-<td>Male</td>
+    <form>
 
-</tr>
+        <label>Name:</label><br>
+        <input type="text" placeholder="Pulkit Saraogi" >
 
-<tr>
+        <br><br>
 
-<td><b>Blood Group</b></td>
+        <label>Email:</label><br>
+        <input type="email" placeholder="ps123@gmail.com">
 
-<td>B+</td>
+        <br><br>
 
-</tr>
+        <label>Message:</label><br>
 
-<tr>
+        <textarea rows="5" cols="30"
+        placeholder="Write your message"></textarea>
 
-<td><b>City</b></td>
+        <br><br>
 
-<td>Suratgarh</td>
+        <input type="submit" value="Submit">
 
-</tr>
+    </form>
 
-<tr>
-
-<td><b>State</b></td>
-
-<td>Rajasthan</td>
-
-</tr>
-
-<tr>
-
-<td><b>Nationality</b></td>
-
-<td>Indian</td>
-
-</tr>
-
-</table>
-
-</section>
-
-<section>
-
-<h2>📚 Education</h2>
-
-<table>
-
-<tr>
-
-<th>Degree</th>
-<th>Institution</th>
-<th>Year</th>
-<th>Percentage</th>
-
-</tr>
-
-<tr>
-
-<td>10th</td>
-<td>KV AFS SOG</td>
-<td>2023</td>
-<td>86%</td>
-
-</tr>
-
-<tr>
-
-<td>12th</td>
-<td>Sunrise School</td>
-<td>2025</td>
-<td>72%</td>
-
-</tr>
-
-<tr>
-
-<td>B.Tech</td>
-<td>SKIT Jaipur</td>
-<td>2025 - Present</td>
-<td>Currently Studying</td>
-
-</tr>
-
-</table>
-
-</section>
-
-<section>
-
-<h2>💻 Skills</h2>
-
-<div class="skills">
-
-<span>C Programming</span>
-
-<span>C++</span>
-<span>HTML</span>
-</div>
-</section><section>
-
-<h2>💼 Projects</h2>
-
-<ul>
-
-<li>Student Portfolio Website</li>
-
-<li>Different forms</li>
-
-<li>Calculator</li>
-
-<li>Coming Soon...</li>
-
-</ul>
-
-</section>
-
-<section>
-
-<h2>🎯 Hobbies</h2>
-
-<ul>
-
-<li>Coding</li>
-
-<li>Reading Technology Blogs</li>
-
-<li>Learning New Skills</li>
-
-<li>Playing Cricket</li>
-
-</ul>
-
-</section>
-    <section>
-
-<h2>🎯 Career Objective</h2>
-
-<p>
-
-To become a skilled Software Engineer by continuously improving my programming, web development, and problem-solving skills while contributing to innovative projects.
-
-</p>
-
-</section>
-<section
-<h2>🌐 Favourite Website</h2>
-<br>
-<a href="https://youtu.be/k2DSi1zGEc8?si=baMp67LEHrfXxMoW" target="_blank">
-Watch My Favourite HTML Tutorial
-</a>
-</section>
-<section>
-<h2>📩 Contact Form</h2>
-<form>
-<label>Name</label>
-<input type="text" placeholder="write your name">
-<label>Email</label>
-<input type="email" placeholder="enter your email">
-<label>Message</label>
-<textarea rows="5" placeholder="Write your message"></textarea>
-<input type="submit" value="Send Message">
-</form>
-</section>
-<section>
-
-<h2>🌐 Social Profiles</h2>
-
-<p>
-
-<a href="https://github.com/pulkit-saraogi" target="_blank">GitHub</a> |
-
-<a href="https://www.linkedin.com/in/pulkit-saraogi-a622883ab?utm_source=share_via&utm_content=profile&utm_medium=member_android"target="_blank">LinkedIn</a> |
-
-<a href="https://www.instagram.com/ft.pulkittt__?igsh=MXN3Z2hiMGg5MjJnYQ=="target="_blank">Instagram</a>
-
-</p>
-
-</section>
-<footer>
-<h1>Designed by ❤️ Pulkit Saraogi</h1>
-<br>
-
-© 2026 All Rights Reserved
-
-</footer>
-</div>
 </body>
+
 </html>
+
+
