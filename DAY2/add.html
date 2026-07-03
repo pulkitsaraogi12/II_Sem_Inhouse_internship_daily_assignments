@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+    <img src="WhatsApp Image 2026-06-28 at 10.21.29 PM.jpeg" alt="College Logo" class="logo">
+
+    <h1>College Admission Portal</h1>
+
+    <p>Academic Session 2026–2027</p>
+
+    <span class="subtitle">
+        Empowering Future Engineers
+    </span>
+
+</div>
+
+    <form>
+
+        <h2>Personal Information</h2>
+
+        <div class="row">
+
+            <div class="input-box">
+                <label>First Name</label>
+                <input type="text"
+                placeholder="Enter First Name"
+                required>
+            </div>
+
+            <div class="input-box">
+                <label>Last Name</label>
+                <input type="text"
+                placeholder="Enter Last Name"
+                required>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="input-box">
+                <label>Date of Birth</label>
+                <input type="date" required>
+            </div>
+
+            <div class="input-box">
+                <label>Gender</label>
+
+                <div class="gender">
+                    <label><input type="radio" name="gender" required> Male</label>
+
+                    <label><input type="radio" name="gender"> Female</label>
+
+                    <label><input type="radio" name="gender"> Other</label>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="input-box">
+                <label>Email</label>
+                <input type="email"
+                placeholder="example@gmail.com"
+                required>
+            </div>
+
+            <div class="input-box">
+                <label>Mobile Number</label>
+                <input type="tel"
+                placeholder="9876543210"
+                pattern="[0-9]{10}"
+                required>
+            </div>
+
+        </div>
+
+        <div class="input-box">
+            <label>Address</label>
+
+            <textarea
+            rows="4"
+            placeholder="Enter Full Address"
+            required></textarea>
+        </div>
+
+        <h2>Academic Details</h2>
+
+        <div class="row">
+
+            <div class="input-box">
+                <label>Course</label>
+
+                <select required>
+                    <option value="">Select Course</option>
+                    <option>B.Tech</option>
+                    <option>BCA</option>
+                    <option>BBA</option>
+                    <option>B.Sc</option>
+                    <option>BA</option>
+                    <option>B.Com</option>
+                    <option>MCA</option>
+                    <option>MBA</option>
+                </select>
+
+            </div>
+
+            <div class="input-box">
+                <label>Department</label>
+
+                <select required>
+                    <option value="">Select Department</option>
+                    <option>Computer Science</option>
+                    <option>Civil Engineering</option>
+                    <option>Mechanical Engineering</option>
+                    <option>Electrical Engineering</option>
+                    <option>Commerce</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="input-box">
+                <label>12th Percentage</label>
+
+                <input type="number"
+                placeholder="Enter Percentage"
+                min="35"
+                max="100"
+                required>
+            </div>
+
+            <div class="input-box">
+                <label>Passing Year</label>
+
+                <input type="number"
+                placeholder="2026"
+                min="2010"
+                max="2030"
+                required>
+            </div>
+
+        </div>
+
+        <h2>Documents</h2>
+
+        <div class="row">
+
+            <div class="input-box">
+                <label>Passport Size Photo</label>
+                <input type="file" required>
+            </div>
+
+            <div class="input-box">
+                <label>Upload Marksheet</label>
+                <input type="file" required>
+            </div>
+
+        </div>
+
+        <div class="checkbox">
+
+            <label>
+                <input type="checkbox" required>
+                I hereby declare that all information provided is true.
+            </label>
+
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Submit Application</button>
+            <button type="reset">Reset Form</button>
+        </div>
+
+    </form>
+    <footer>
+
+© 2026 College Admission Portal
+<br>
+Designed by Pulkit Saraogi
+
+</footer>
+
+</div>
+
+</body>
+</html>
