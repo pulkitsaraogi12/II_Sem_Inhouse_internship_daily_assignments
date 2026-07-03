@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+
+    background:linear-gradient(135deg,#74ebd5,#9face6);
+
+    transition:.5s;
+}
+
+.container{
+
+    text-align:center;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    width:320px;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+
+    margin:20px auto;
+
+    transition:.5s;
+
+}
+
+h1{
+
+    margin:15px;
+
+}
+
+button{
+
+    padding:12px 20px;
+
+    margin:10px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+#increase{
+
+    background:#4CAF50;
+    color:white;
+
+}
+
+#increase:hover{
+
+    background:#2e8b57;
+
+}
+#decrease{
+
+    background:#ff9800;
+    color:white;
+
+}
+
+#decrease:hover{
+
+    background:#e65100;
+
+}
+
+#reset{
+
+    background:#ff4444;
+    color:white;
+
+}
+
+#reset:hover{
+
+    background:#cc0000;
+
+}
+
+#darkBtn{
+
+    background:#222;
+    color:white;
+
+}
+
+#darkBtn:hover{
+
+    background:black;
+
+}
+
+/* Dark Mode */
+
+.dark{
+
+    background:#111;
+
+    color:white;
+
+}
+
+.dark .card{
+
+    background:#222;
+
+    color:white;
+
+}
