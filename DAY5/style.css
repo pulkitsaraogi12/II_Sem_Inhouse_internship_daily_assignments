@@ -1,0 +1,315 @@
+:root {
+    /* Light Mode Variables */
+    --bg-color: #f3f4f6;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --card-border: rgba(255, 255, 255, 0.5);
+    --input-bg: rgba(255, 255, 255, 0.8);
+    --input-border: #d1d5db;
+    --input-focus: #6366f1;
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --blob-1: #c7d2fe;
+    --blob-2: #fbcfe8;
+}
+
+body.dark-mode {
+    /* Dark Mode Variables */
+    --bg-color: #0f172a;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --card-bg: rgba(30, 41, 59, 0.6);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --input-bg: rgba(15, 23, 42, 0.6);
+    --input-border: #334155;
+    --input-focus: #818cf8;
+    --primary-color: #6366f1;
+    --primary-hover: #818cf8;
+    --blob-1: #3730a3;
+    --blob-2: #831843;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background Blobs for Visual Aesthetics */
+.background-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    animation: float 10s infinite alternate;
+}
+
+.blob-1 {
+    top: -10%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: var(--blob-1);
+    transition: background 0.5s ease;
+}
+
+.blob-2 {
+    bottom: -10%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: var(--blob-2);
+    animation-delay: -5s;
+    transition: background 0.5s ease;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 50px) scale(1.1); }
+}
+
+/* Header & Theme Toggle */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.theme-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    color: var(--text-primary);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    background: var(--primary-color);
+    color: white;
+}
+
+body.dark-mode .sun-icon { display: block; }
+body.dark-mode .moon-icon { display: none; }
+body:not(.dark-mode) .sun-icon { display: none; }
+body:not(.dark-mode) .moon-icon { display: block; }
+
+/* Main Layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 5%;
+    gap: 3rem;
+}
+
+.hero-section {
+    flex: 1 1 500px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.date {
+    font-size: 4rem;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+body:not(.dark-mode) .date {
+    -webkit-text-stroke: 2px var(--text-primary);
+    color: var(--primary-color);
+}
+
+
+.subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Countdown */
+.countdown {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-box span {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.time-box label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form Section (Glassmorphism) */
+.registration-section {
+    flex: 1 1 400px;
+}
+
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--input-border);
+    background: var(--input-bg);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: var(--input-focus);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.input-group select option {
+    background: var(--bg-color);
+    color: var(--text-primary);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.success-msg {
+    display: none;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .title { font-size: 2.5rem; }
+    .date { font-size: 3rem; }
+    .countdown { gap: 1rem; }
+    .time-box span { font-size: 1.8rem; }
+    .container { gap: 2rem; margin: 1rem auto; }
+}
