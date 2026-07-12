@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7: PHP Data Ingestion</title>
+    <!-- Link to our unified CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>Server-Side Data Ingestion</h1>
+        <p class="subtitle">Submit this form to send a data payload securely to the PHP backend.</p>
+
+        <!-- The action attribute points to our PHP script. The method is set to POST -->
+        <form action="process.php" method="POST" class="custom-form">
+            
+            <div class="form-group">
+                <label for="username">Operator Username:</label>
+                <!-- We give this input the name="username" so PHP knows how to find it -->
+                <input type="text" id="username" name="username" placeholder="Enter your username...">
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Payload to Server</button>
+            
+        </form>
+    </div>
+
+</body>
+</html>
